@@ -1,0 +1,1 @@
+.nicemenu{position:relative}.nicemenu *{box-sizing:border-box;margin:0;padding:0}.nicemenu-list{position:relative;display:block}.nicemenu-item{display:inline-block;z-index:11}.nicemenu-list.verticle>.nicemenu-item{display:block !important}.nicemenu-sub{position:absolute;z-index:12;display:none}.nicemenu-sub.active{display:block}

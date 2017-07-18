@@ -1,0 +1,36 @@
+$nicemenu-list-zIndex: 11;
+
+.nicemenu {
+  position: relative;
+
+  // reset
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.nicemenu-list {
+  position: relative;
+  display: block;
+}
+
+.nicemenu-item {
+  display: inline-block;
+  z-index: $nicemenu-list-zIndex;
+}
+
+.nicemenu-list.verticle > .nicemenu-item {
+  display: block !important;
+}
+
+.nicemenu-sub {
+  position: absolute;
+  z-index: ($nicemenu-list-zIndex + 1);
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
