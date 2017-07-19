@@ -12,7 +12,7 @@
     "nicemenu": function (parameters) {
       // default parameters
       var defaults = {
-        pos: "list.right",
+        pos: "list.bottom",
         classes: "active",
       }
 

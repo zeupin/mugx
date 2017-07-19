@@ -20,6 +20,13 @@
 
 ## 核心类
 
+* `.nicemenu` 水平主菜单
+* `.nicemenu.verticle` 垂直主菜单
+* `.nicemenu-item` 主菜单条目
+* `.nicemenu-sub` 二级菜单区
+
+## 结构
+
 * `.nicemenu`[`data-pos`=`...` `data-classes`=`...`] 或
 * `.nicemenu.verticle`[`data-pos`=`...` `data-classes`=`...`]
 	* `.nicemenu-item`
@@ -53,7 +60,7 @@
 </body>
 ```
 
-> - **data-pos** 是二级菜单将要显示的位置，取值可为 `list.right`, `list.left`, `list.bottom`, `list.top`，如果没有设置，默认为 `list.right`。
+> - **data-pos** 是二级菜单将要显示的位置，取值可为 `list.right`, `list.left`, `list.bottom`, `list.top`，如果没有设置，默认为 `list.bottom`。
 > - **data-classes** 是当鼠标进入一级菜单时，二级菜单将要应用的类。如果没有设置，默认为 `active`。
 
 ### 3. 加入一级菜单和二级菜单的内容
@@ -112,9 +119,16 @@
 
 如果您觉得本程序对您还有点用，请支持本项目，为我们在github上给个star，或者fork本项目。
 
+如果有在上海和武汉的朋友，欢迎约时间见面吹牛聊天，话题不限，可以是技术、创业、运动或者其他任何话题。这两个城市我都经常跑，非常乐意和大家交朋友。
+
+## 广告时间
+
+如果有软件开发、网站建站、APP开发、平面设计等需要的朋友或者公司，也欢迎线上和线下交流。宙品科技的研发团队都是资深的专业人士，有着丰富的项目经验，能又快又好的把您的预期效果实现出来，热诚欢迎您的垂询！详询：021-31662600。
+
 ## 版权
 
 MIT授权，可以自由商用，但是请保留原始版权信息。拒当源码流氓，从我们自己做起，谢谢大家！
 
 作者： 刘念 <https://github.com/maccliu/>
+
 Copyright (c) 2017 [Zeupin LLC](http://zeupin.com)
