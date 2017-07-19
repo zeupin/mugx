@@ -1,7 +1,9 @@
 /**
- * A nice sliding menu jquery extension
+ * A nice sliding menu jquery extension.
+ * See https://github.com/zeupin/nicemenu
  *
  * Copyright (c) 2017 Zeupin LLC.
+ * Author: Macc Liu (https://github.com/maccliu)
  * Licensed under MIT.
  */
 ;
@@ -9,7 +11,10 @@
   $.fn.extend({
     "nicemenu": function (parameters) {
       // default parameters
-      var defaults = {}
+      var defaults = {
+        pos: "list.right",
+        classes: "active",
+      }
 
       // combines defaults and parameters
       var options = $.extend({}, defaults, parameters);
@@ -19,13 +24,13 @@
         // get [data-pos=...] attribute
         var pos = $(this).attr("data-pos");
         if (pos == undefined) {
-          pos = "list.right";
+          pos = options.pos;
         }
 
         // get [data-classes=...] attribute
         var classes = $(this).attr("data-classes");
         if (classes == undefined) {
-          classes = "active";
+          classes = options.classes;
         }
 
         // get .nicemenu-list element
