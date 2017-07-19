@@ -1,0 +1,51 @@
+h1 {
+  font-size: 1.5em;
+  line-height: 2em;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.wrapper {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer {
+  margin-top: 3em;
+  background: #444;
+  color: #e0e0e0;
+  padding: 1em 0;
+  line-height: 2em;
+  font-size: 0.9em;
+  text-align: center;
+
+  a {
+    color: #e0e0e0;
+    text-decoration: none;
+  }
+}
+
+.code {
+  font-family: "courier new";
+  font-size: 0.8em;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+img.demo {
+  display: block;
+  max-width: 800px;
+  height: auto;
+}
+
+div.height-200 {
+  height: 200px;
+}

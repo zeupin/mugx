@@ -2,8 +2,10 @@
 
 一个漂亮的jquery菜单插件，可以轻松的完成类似淘宝、京东、小米等电商类的商品多目录分级样式。
 
-![](assets/pos-right.png)
-![](assets/pos-left.png)
+![](assets/001.png)
+![](assets/002.png)
+![](assets/003.png)
+![](assets/004.png)
 
 ## 功能特点
 
@@ -11,20 +13,22 @@
 * 多个二级菜单的显示位置。
 * 核心控制样式和主题样式分离。
 * MIT授权，可随意使用。
+* 体积小巧，压缩后，js和css加一起仅有不可思议的2kb！
 * 代码结构清晰，使用方便。
 * 预定义的多个主题样式，直接拷贝，极速呈现！
 * 将来会添加更多主题样式，方便大家使用。
 
 ## 核心类
 
-* `.nicemenu`[`data-pos`=`...` `data-classes`=`...`]
-    * `.nicemenu-list` 或 `.nicemenu-list.verticle`
-	    * `.nicemenu-item`
-	        * `.nicemenu-sub`
-	    * `.nicemenu-item`
-	        * `.nicemenu-sub`
-	    * `.nicemenu-item`
-	        * `.nicemenu-sub`
+* `.nicemenu`[`data-pos`=`...` `data-classes`=`...`] 或
+* `.nicemenu.verticle`[`data-pos`=`...` `data-classes`=`...`]
+	* `.nicemenu-item`
+		* `.nicemenu-sub`
+	* `.nicemenu-item`
+		* `.nicemenu-sub`
+	* `.nicemenu-item`
+		* `.nicemenu-sub
+
 ## 用法
 
 ### 1. 在head中插入样式：
@@ -39,7 +43,7 @@
 > - **nicemenu.css** 是核心样式，一般保留原样，不要修改
 > - **nicemenu.theme.css** 是主题样式，用于设计不同的主题，可以自行设计
 
-### 2. 在body中加入 `div.nicemenu`
+### 2. 在body中加入 `div.nicemenu`（显示为水平菜单）或者`div.nicemenu.verticle`（显示为垂直菜单）
 
 ```html
 <body>
@@ -106,9 +110,11 @@
 
 欢迎大家一起参与持续改进这个前端库，如果发现任何bug或者提出任何建议，欢迎提交PR。
 
+如果您觉得本程序对您还有点用，请支持本项目，为我们在github上给个star，或者fork本项目。
+
 ## 版权
 
-MIT授权，可以自由商用，但是请保留原始版权信息，谢谢大家！
+MIT授权，可以自由商用，但是请保留原始版权信息。拒当源码流氓，从我们自己做起，谢谢大家！
 
 作者： 刘念 <https://github.com/maccliu/>
 Copyright (c) 2017 [Zeupin LLC](http://zeupin.com)

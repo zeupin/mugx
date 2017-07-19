@@ -2,18 +2,14 @@ $nicemenu-list-zIndex: 11;
 
 .nicemenu {
   position: relative;
+  display: block;
 
   // reset
   * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
-}
-
-.nicemenu-list {
-  position: relative;
-  display: block;
 }
 
 .nicemenu-item {
@@ -21,7 +17,7 @@ $nicemenu-list-zIndex: 11;
   z-index: $nicemenu-list-zIndex;
 }
 
-.nicemenu-list.verticle > .nicemenu-item {
+.verticle > .nicemenu-item {
   display: block !important;
 }
 

@@ -34,8 +34,7 @@
         }
 
         // get .nicemenu-list element
-        var list = $(this).find(".nicemenu-list");
-        if (list.length == 0) return true;
+        var list = $(this);
 
         // each .nicemenu-item element
         $(this).find(".nicemenu-item").each(function () {
@@ -65,18 +64,19 @@
               });
               break;
 
-            case "list.top":
+            case "list.bottom":
               sub.css({
-                "top": 0,
                 "left": 0,
                 "width": list.outerWidth() + "px"
               });
               break;
 
-            case "list.bottom":
+            case "list.top":
               sub.css({
                 "left": 0,
-                "width": list.outerWidth() + "px"
+                "width": list.outerWidth() + "px",
+                "bottom": 0,
+                "margin-bottom": list.outerHeight() + "px",
               });
               break;
           }

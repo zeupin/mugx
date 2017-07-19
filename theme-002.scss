@@ -1,0 +1,69 @@
+// 活动菜单项的背景色
+$nicemnu-active-bgcolor: #79c2b1;
+
+.nicemenu {
+  // 必填项
+  width: 250px;
+  margin-left: auto;
+
+}
+
+.nicemenu-item {
+  background-color:  #314349;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 10px;
+
+  h6 {
+    color: #f0f0f0;
+    font-size: 16px;
+    line-height: 2em;
+  }
+
+  p {
+    color: #a0a0a0;
+    font-size: 0.9em;
+    line-height: 2em;
+  }
+
+  a {
+    color: #f0f0f0;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &.active {
+    background-color: $nicemnu-active-bgcolor;
+  }
+}
+
+.nicemenu-sub {
+  background-color: $nicemnu-active-bgcolor;
+  padding: 16px;
+  overflow: hidden;
+  color: #000;
+  width: 750px;
+  box-shadow: -5px 5px 5px #888888;
+
+  h5 {
+    font-size: 1.2em;
+  }
+
+  & h6 {
+    color: #000 !important;
+    font-size: 18px;
+  }
+
+  & p {
+    color: #333;
+  }
+}
+
+.w-3-1 {
+  position: relative;
+  float: left;
+  width: 30%;
+  margin-right: 3%;
+}
