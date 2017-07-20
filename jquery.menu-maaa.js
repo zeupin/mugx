@@ -40,6 +40,14 @@
         // each .maaa-item element
         $(this).find(".maaa-item").each(function () {
 
+          // add/remove .active class for each .maaa-item element
+          $(this).mouseenter(function () {
+            $(this).addClass("active");
+          });
+          $(this).mouseleave(function () {
+            $(this).removeClass("active");
+          });
+
           // get .maaa-sub element
           var sub = $(this).find(".maaa-sub");
           if (sub.length == 0) return true;
@@ -82,14 +90,11 @@
               break;
           }
 
+          // add/remove classes for each .maaa-sub element
           $(this).mouseenter(function () {
-            $(this).addClass("active");
             sub.addClass(classes);
-
           });
-
           $(this).mouseleave(function () {
-            $(this).removeClass("active");
             sub.removeClass(classes);
           });
         });
