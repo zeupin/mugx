@@ -1,6 +1,6 @@
-# nicemenu
+# menu-maaa
 
-一个漂亮的jquery菜单插件，可以轻松的完成类似淘宝、京东、小米等电商类的商品多目录分级样式。
+一个漂亮的jquery菜单插件，可以轻松的完成类似淘宝、京东、小米等电商类的商品多目录分级样式，也可制作普通的Megamenu菜单。
 
 ![](assets/001.png)
 ![](assets/002.png)
@@ -20,21 +20,21 @@
 
 ## 核心类
 
-* `.nicemenu` 水平主菜单
-* `.nicemenu.verticle` 垂直主菜单
-* `.nicemenu-item` 主菜单条目
-* `.nicemenu-sub` 二级菜单区
+* `.maaa` 水平主菜单
+* `.maaa.verticle` 垂直主菜单
+* `.maaa-item` 主菜单条目
+* `.maaa-sub` 二级菜单区
 
 ## 结构
 
-* `.nicemenu`[`data-pos`=`...` `data-classes`=`...`] 或
-* `.nicemenu.verticle`[`data-pos`=`...` `data-classes`=`...`]
-	* `.nicemenu-item`
-		* `.nicemenu-sub`
-	* `.nicemenu-item`
-		* `.nicemenu-sub`
-	* `.nicemenu-item`
-		* `.nicemenu-sub
+* `.maaa`[`data-pos`=`...` `data-classes`=`...`] 或
+* `.maaa.verticle`[`data-pos`=`...` `data-classes`=`...`]
+	* `.maaa-item`
+		* `.maaa-sub`
+	* `.maaa-item`
+		* `.maaa-sub`
+	* `.maaa-item`
+		* `.maaa-sub
 
 ## 用法
 
@@ -42,19 +42,19 @@
 
 ```html
 <head>
-  <link rel="stylesheet" href="<path>/nicemenu.css">
-  <link rel="stylesheet" href="<path>/nicemenu.theme.css">
+  <link rel="stylesheet" href="<path>/menu-maaa.css">
+  <link rel="stylesheet" href="<path>/maaa.theme.css">
 </head>
 ```
 
-> - **nicemenu.css** 是核心样式，一般保留原样，不要修改
-> - **nicemenu.theme.css** 是主题样式，用于设计不同的主题，可以自行设计
+> - **menu-maaa.css** 是核心样式，一般保留原样，不要修改
+> - **maaa.theme.css** 是主题样式，用于设计不同的主题，可以自行设计
 
-### 2. 在body中加入 `div.nicemenu`（显示为水平菜单）或者`div.nicemenu.verticle`（显示为垂直菜单）
+### 2. 在body中加入 `div.maaa`（显示为水平菜单）或者`div.maaa.verticle`（显示为垂直菜单）
 
 ```html
 <body>
-  <div class="nicemenu" data-pos="二级菜单的显示位置" data-classes="一个或多个类">
+  <div class="maaa" data-pos="二级菜单的显示位置" data-classes="一个或多个类">
     ...
   </div>
 </body>
@@ -66,28 +66,28 @@
 ### 3. 加入一级菜单和二级菜单的内容
 
 ```html
-<div class="nicemenu" data-pos="二级菜单的显示位置" data-classes="一个或多个类">
-  <div class="nicemenu-list">
-    <div class="nicemenu-item">
+<div class="maaa" data-pos="二级菜单的显示位置" data-classes="一个或多个类">
+  <div class="maaa-list">
+    <div class="maaa-item">
       <h6>大标题</h6>
       <p>小标题</p>
-      <div class="nicemenu-sub">
+      <div class="maaa-sub">
         二级菜单内容
       </div>
     </div>
 
-    <div class="nicemenu-item">
+    <div class="maaa-item">
       <h6>大标题</h6>
       <p>小标题</p>
-      <div class="nicemenu-sub">
+      <div class="maaa-sub">
         二级菜单内容
       </div>
     </div>
 
-    <div class="nicemenu-item">
+    <div class="maaa-item">
       <h6>大标题</h6>
       <p>小标题</p>
-      <div class="nicemenu-sub">
+      <div class="maaa-sub">
         二级菜单内容
       </div>
     </div>
@@ -95,18 +95,18 @@
 </div>
 ```
 
-> 一级菜单中的大标题设为`h6`，小标题设为`p`，只是演示而已。可根据自己需要，在 nicemenu.theme.css 文件中自行定义需要的样式。
+> 一级菜单中的大标题设为`h6`，小标题设为`p`，只是演示而已。可根据自己需要，在 maaa.theme.css 文件中自行定义需要的样式。
 
-### 4. 导入jquery和jquery.nicemenu.js，然后应用。
+### 4. 导入jquery和jquery.menu-maaa.js，然后应用。
 
 ```html
 <body>
   <!-- 前面已经添加好了的HTML内容 -->
 
   <script src="<path>/jquery.min.js"></script>
-  <script src="<path>/jquery.nicemenu.min.js"></script>
+  <script src="<path>/jquery.maaa.min.js"></script>
   <script>
-    $(".nicemenu").nicemenu();
+    $(".maaa").maaa();
   </script>
 </body>
 ```

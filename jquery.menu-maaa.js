@@ -1,15 +1,16 @@
 /**
  * A nice sliding menu jquery extension.
- * See https://github.com/zeupin/nicemenu
+ * See https://github.com/zeupin/menu-maaa
  *
  * Copyright (c) 2017 Zeupin LLC.
  * Author: Macc Liu (https://github.com/maccliu)
+ *
  * Licensed under MIT.
  */
 ;
 (function ($) {
   $.fn.extend({
-    "nicemenu": function (parameters) {
+    "maaa": function (parameters) {
       // default parameters
       var defaults = {
         pos: "list.bottom",
@@ -33,14 +34,14 @@
           classes = options.classes;
         }
 
-        // get .nicemenu-list element
+        // get .maaa-list element
         var list = $(this);
 
-        // each .nicemenu-item element
-        $(this).find(".nicemenu-item").each(function () {
+        // each .maaa-item element
+        $(this).find(".maaa-item").each(function () {
 
-          // get .nicemenu-sub element
-          var sub = $(this).find(".nicemenu-sub");
+          // get .maaa-sub element
+          var sub = $(this).find(".maaa-sub");
           if (sub.length == 0) return true;
 
           switch (pos) {

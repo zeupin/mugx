@@ -1,14 +1,14 @@
 // 活动菜单项的背景色
-$nicemnu-active-bgcolor: #79c2b1;
+$maaa-active-bgcolor: #79c2b1;
 
-.nicemenu {
+.maaa {
   // 必填项
   width: 250px;
   margin-left: auto;
 
 }
 
-.nicemenu-item {
+.maaa-item {
   background-color:  #314349;
   padding-left: 16px;
   padding-right: 16px;
@@ -35,12 +35,12 @@ $nicemnu-active-bgcolor: #79c2b1;
   }
 
   &.active {
-    background-color: $nicemnu-active-bgcolor;
+    background-color: $maaa-active-bgcolor;
   }
 }
 
-.nicemenu-sub {
-  background-color: $nicemnu-active-bgcolor;
+.maaa-sub {
+  background-color: $maaa-active-bgcolor;
   padding: 16px;
   overflow: hidden;
   color: #000;

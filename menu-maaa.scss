@@ -1,0 +1,45 @@
+// --------------------------------------------------
+// .menu-maaa 的核心样式
+// --------------------------------------------------
+
+// .maaa 的z-index值
+$maaa-list-zIndex: 20;
+
+// 主菜单
+.maaa {
+  position: relative;
+  display: block;
+
+  // reset
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ul,ol,li {
+    list-style: none;
+  }
+}
+
+// 水平样式的 .maaa-item (默认)
+.maaa-item {
+  display: inline-block;
+  z-index: $maaa-list-zIndex;
+}
+
+// 垂直样式的 .macc-item
+.verticle > .maaa-item {
+  display: block !important;
+}
+
+// 二级菜单
+.maaa-sub {
+  position: absolute;
+  z-index: ($maaa-list-zIndex + 1); // 二级菜单的z-index要比主菜单的高一点
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
