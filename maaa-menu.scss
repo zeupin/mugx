@@ -5,35 +5,54 @@
 // .maaa 的z-index值
 $maaa-list-zIndex: 20;
 
+// --------------------------------------------------
+// reset
+// --------------------------------------------------
+
+.maaa,
+.maaa-item,
+.maaa-sub {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// --------------------------------------------------
 // 主菜单
+// --------------------------------------------------
+
 .maaa {
   position: relative;
   display: block;
-
-  // reset
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
 
   ul,ol,li {
     list-style: none;
   }
 }
 
-// 水平样式的 .maaa-item (默认)
+// --------------------------------------------------
+// 主菜单项
+// --------------------------------------------------
+// 注意事项:
+// 1 .maaa-item 不准设置任何position样式, 必须保持position为空
+
+// 水平样式的主菜单条目 .maaa-item (默认)
+// 如: 传统网站的主菜单样式
 .maaa-item {
   display: inline-block;
   z-index: $maaa-list-zIndex;
 }
 
-// 垂直样式的 .macc-item
+// 垂直样式的主菜单条目 .maaa.verticle > .maaa-item
+// 如: 商城网站的纵向产品菜单样式
 .verticle > .maaa-item {
   display: block !important;
 }
 
+// --------------------------------------------------
 // 二级菜单
+// --------------------------------------------------
+
 .maaa-sub {
   position: absolute;
   z-index: ($maaa-list-zIndex + 1); // 二级菜单的z-index要比主菜单的高一点
