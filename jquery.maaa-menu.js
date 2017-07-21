@@ -37,6 +37,7 @@
         // get the .maaa-list element
         var list = $(this);
         var list_width = list.outerWidth();
+        var list_height = list.outerHeight();
 
         // fetch all items
         var items = $(this).find(".maaa-item");
@@ -67,7 +68,7 @@
                 "top": 0,
                 "left": 0,
                 "margin-left": list_width + "px",
-                "height": list.outerHeight() + "px",
+                "height": list_height + "px",
                 "border-left": "none"
               });
               break;
@@ -77,7 +78,7 @@
                 "top": 0,
                 "right": 0,
                 "margin-right": list_width + "px",
-                "height": list.outerHeight() + "px",
+                "height": list_height + "px",
                 "border-right": "none"
               });
               break;
@@ -94,7 +95,7 @@
                 "left": 0,
                 "width": list_width + "px",
                 "bottom": 0,
-                "margin-bottom": list.outerHeight() + "px"
+                "margin-bottom": list_height + "px"
               });
               break;
 
@@ -121,19 +122,19 @@
                   "width": list_width + "px",
                   "left": 0,
                   "bottom": 0,
-                  "margin-bottom": list.outerHeight() + "px"
+                  "margin-bottom": list_height + "px"
                 });
               } else if ((item_left + sub_width) > list_width) {
                 sub.css({
                   "right": 0,
                   "bottom": 0,
-                  "margin-bottom": list.outerHeight() + "px"
+                  "margin-bottom": list_height + "px"
                 });
               } else {
                 sub.css({
                   "left": item_left + "px",
                   "bottom": 0,
-                  "margin-bottom": list.outerHeight() + "px"
+                  "margin-bottom": list_height + "px"
                 });
               }
               break;
