@@ -34,30 +34,39 @@
           classes = options.classes;
         }
 
-        // get .maaa-list element
+        // get the .maaa-list element
         var list = $(this);
+        var list_width = list.outerWidth();
+
+        // fetch all items
+        var items = $(this).find(".maaa-item");
 
         // each .maaa-item element
-        $(this).find(".maaa-item").each(function () {
+        items.each(function (item_index, item_ele) {
+
+          // get the .maaa-item element
+          var item = $(this);
+          var item_left = item.position().left;
 
           // add/remove .active class for each .maaa-item element
-          $(this).mouseenter(function () {
-            $(this).addClass("active");
+          item.mouseenter(function () {
+            item.addClass("active");
           });
-          $(this).mouseleave(function () {
-            $(this).removeClass("active");
+          item.mouseleave(function () {
+            item.removeClass("active");
           });
 
           // get .maaa-sub element
-          var sub = $(this).find(".maaa-sub");
+          var sub = item.find(".maaa-sub");
           if (sub.length == 0) return true;
+          var sub_width = sub.outerWidth();
 
           switch (pos) {
             case "list.right":
               sub.css({
                 "top": 0,
                 "left": 0,
-                "margin-left": (list.outerWidth() - 1) + "px",
+                "margin-left": list_width + "px",
                 "height": list.outerHeight() + "px",
                 "border-left": "none"
               });
@@ -67,7 +76,7 @@
               sub.css({
                 "top": 0,
                 "right": 0,
-                "margin-right": (list.outerWidth() - 1) + "px",
+                "margin-right": list_width + "px",
                 "height": list.outerHeight() + "px",
                 "border-right": "none"
               });
@@ -76,18 +85,62 @@
             case "list.bottom":
               sub.css({
                 "left": 0,
-                "width": list.outerWidth() + "px"
+                "width": list_width + "px"
               });
               break;
 
             case "list.top":
               sub.css({
                 "left": 0,
-                "width": list.outerWidth() + "px",
+                "width": list_width + "px",
                 "bottom": 0,
-                "margin-bottom": list.outerHeight() + "px",
+                "margin-bottom": list.outerHeight() + "px"
               });
               break;
+
+            case "item.bottom":
+              if (sub_width > list_width) {
+                sub.css({
+                  "width": list_width + "px",
+                  "left": 0
+                });
+              } else if ((item_left + sub_width) > list_width) {
+                sub.css({
+                  "right": 0
+                });
+              } else {
+                sub.css({
+                  "left": item_left + "px",
+                });
+              }
+              break;
+
+            case "item.top":
+              if (sub_width > list_width) {
+                sub.css({
+                  "width": list_width + "px",
+                  "left": 0,
+                  "bottom": 0,
+                  "margin-bottom": list.outerHeight() + "px"
+                });
+              } else if ((item_left + sub_width) > list_width) {
+                sub.css({
+                  "right": 0,
+                  "bottom": 0,
+                  "margin-bottom": list.outerHeight() + "px"
+                });
+              } else {
+                sub.css({
+                  "left": item_left + "px",
+                  "bottom": 0,
+                  "margin-bottom": list.outerHeight() + "px"
+                });
+              }
+              break;
+
+            default:
+              // if data-pos is invalid
+              return true;
           }
 
           // add/remove classes for each .maaa-sub element
