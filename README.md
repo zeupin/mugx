@@ -1,4 +1,4 @@
-# menu-maaa
+# maaa-menu
 
 一个漂亮的jquery菜单插件，既可以轻松的完成类似淘宝、京东、小米等电商类的商品多目录分级样式，也可制作美观的MegaMenu样式菜单。
 
@@ -15,7 +15,7 @@
 
 ## 演示
 
-如下是一些典型样式, 更多主题演示请至: <https://github.com/zeupin/menu-maaa-demo>
+如下是一些典型样式, 更多主题演示请至: <https://github.com/zeupin/maaa-menu-demo>
 
 ![](assets/001.png)
 ![](assets/002.png)
@@ -46,12 +46,12 @@
 
 ```html
 <head>
-  <link rel="stylesheet" href="<path>/menu-maaa.css">
-  <link rel="stylesheet" href="<path>/macc.theme.css">
+  <link rel="stylesheet" href="<path>/maaa-menu.css">
+  <link rel="stylesheet" href="<path>/maaa.theme.css">
 </head>
 ```
 
-> - **menu-maaa.css** 是核心样式，一般保留原样，不要修改
+> - **maaa-menu.css** 是核心样式，一般保留原样，不要修改
 > - **maaa.theme.css** 是主题样式，用于设计不同的主题，根据站点要求，自行订制。可参阅演示的模板网页。
 
 ### 2. 在body中加入 `div.maaa`（显示为水平菜单）或者`div.maaa.verticle`（显示为垂直菜单）
@@ -101,7 +101,7 @@
 
 > 一级菜单中的大标题设为`h6`，小标题设为`p`，只是演示而已。可根据自己需要，在 maaa.theme.css 文件中自行定义需要的样式。
 
-### 4. 导入jquery和jquery.menu-maaa.js，然后应用。
+### 4. 导入jquery和jquery.maaa-menu.js，然后应用。
 
 ```html
 <body>

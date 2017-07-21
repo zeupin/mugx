@@ -1,6 +1,6 @@
 /**
  * A nice sliding menu jquery extension.
- * See https://github.com/zeupin/menu-maaa
+ * See https://github.com/zeupin/maaa-menu
  *
  * Copyright (c) 2017 Zeupin LLC.
  * Author: Macc Liu (https://github.com/maccliu)
