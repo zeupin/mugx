@@ -2,6 +2,8 @@
 
 一个漂亮的jquery菜单插件，既可以轻松的完成类似淘宝、京东、小米等电商类的商品多目录分级样式，也可制作美观的MegaMenu样式菜单。
 
+官网: <https://github.com/zeupin/maaa-menu>
+
 ## 功能特点
 
 * MIT授权，可自由商用。
@@ -17,10 +19,12 @@
 
 如下是一些典型样式, 更多主题演示请至: <https://github.com/zeupin/maaa-menu-demo>
 
-![](assets/001.png)
-![](assets/002.png)
-![](assets/003.png)
-![](assets/004.png)
+![](assets/001.gif)
+![](assets/002.gif)
+![](assets/003.gif)
+![](assets/004.gif)
+![](assets/005.gif)
+![](assets/006.gif)
 
 ## 核心类
 
