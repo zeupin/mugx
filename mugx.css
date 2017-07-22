@@ -1,0 +1,1 @@
+.mugx,.mugx-item,.mugx-sub{margin:0;padding:0;box-sizing:border-box}.mugx{position:relative;display:block}.mugx ul,.mugx ol,.mugx li{list-style:none}.mugx-item{display:inline-block;z-index:20}.verticle>.mugx-item{display:block !important}.mugx-sub{position:absolute;z-index:21;display:none}.mugx-sub.active{display:block}

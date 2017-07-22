@@ -1,17 +1,17 @@
 // --------------------------------------------------
-// .maaa-menu 的核心样式
+// .mugx 的核心样式
 // --------------------------------------------------
 
-// .maaa 的z-index值
-$maaa-list-zIndex: 20;
+// .mugx 的z-index值
+$mugx-list-zIndex: 20;
 
 // --------------------------------------------------
 // reset
 // --------------------------------------------------
 
-.maaa,
-.maaa-item,
-.maaa-sub {
+.mugx,
+.mugx-item,
+.mugx-sub {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -21,7 +21,7 @@ $maaa-list-zIndex: 20;
 // 主菜单
 // --------------------------------------------------
 
-.maaa {
+.mugx {
   position: relative;
   display: block;
 
@@ -34,18 +34,18 @@ $maaa-list-zIndex: 20;
 // 主菜单项
 // --------------------------------------------------
 // 注意事项:
-// 1 .maaa-item 不准设置任何position样式, 必须保持position为空
+// 1 .mugx-item 不准设置任何position样式, 必须保持position为空
 
-// 水平样式的主菜单条目 .maaa-item (默认)
+// 水平样式的主菜单条目 .mugx-item (默认)
 // 如: 传统网站的主菜单样式
-.maaa-item {
+.mugx-item {
   display: inline-block;
-  z-index: $maaa-list-zIndex;
+  z-index: $mugx-list-zIndex;
 }
 
-// 垂直样式的主菜单条目 .maaa.verticle > .maaa-item
+// 垂直样式的主菜单条目 .mugx.verticle > .mugx-item
 // 如: 商城网站的纵向产品菜单样式
-.verticle > .maaa-item {
+.verticle > .mugx-item {
   display: block !important;
 }
 
@@ -53,9 +53,9 @@ $maaa-list-zIndex: 20;
 // 二级菜单
 // --------------------------------------------------
 
-.maaa-sub {
+.mugx-sub {
   position: absolute;
-  z-index: ($maaa-list-zIndex + 1); // 二级菜单的z-index要比主菜单的高一点
+  z-index: ($mugx-list-zIndex + 1); // 二级菜单的z-index要比主菜单的高一点
   display: none;
 
   &.active {

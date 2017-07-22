@@ -1,6 +1,6 @@
 /**
  * A nice sliding menu jquery extension.
- * See https://github.com/zeupin/maaa-menu
+ * See https://github.com/zeupin/mugx
  *
  * Copyright (c) 2017 Zeupin LLC.
  * Author: Macc Liu (https://github.com/maccliu)
@@ -10,7 +10,7 @@
 ;
 (function ($) {
   $.fn.extend({
-    "maaa": function (parameters) {
+    "mugx": function (parameters) {
       // default parameters
       var defaults = {
         pos: "list.bottom",
@@ -34,22 +34,22 @@
           classes = options.classes;
         }
 
-        // get the .maaa-list element
+        // get the .mugx-list element
         var list = $(this);
         var list_width = list.outerWidth();
         var list_height = list.outerHeight();
 
         // fetch all items
-        var items = $(this).find(".maaa-item");
+        var items = $(this).find(".mugx-item");
 
-        // each .maaa-item element
+        // each .mugx-item element
         items.each(function (item_index, item_ele) {
 
-          // get the .maaa-item element
+          // get the .mugx-item element
           var item = $(this);
           var item_left = item.position().left;
 
-          // add/remove .active class for each .maaa-item element
+          // add/remove .active class for each .mugx-item element
           item.mouseenter(function () {
             item.addClass("active");
           });
@@ -57,8 +57,8 @@
             item.removeClass("active");
           });
 
-          // get .maaa-sub element
-          var sub = item.find(".maaa-sub");
+          // get .mugx-sub element
+          var sub = item.find(".mugx-sub");
           if (sub.length == 0) return true;
           var sub_width = sub.outerWidth();
 
@@ -144,7 +144,7 @@
               return true;
           }
 
-          // add/remove classes for each .maaa-sub element
+          // add/remove classes for each .mugx-sub element
           $(this).mouseenter(function () {
             sub.addClass(classes);
           });
