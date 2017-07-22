@@ -2,8 +2,7 @@
 // .mugx 的核心样式
 // --------------------------------------------------
 
-// .mugx 的z-index值
-$mugx-list-zIndex: 20;
+@import "_mugx.settings.scss";
 
 // --------------------------------------------------
 // reset
@@ -40,7 +39,7 @@ $mugx-list-zIndex: 20;
 // 如: 传统网站的主菜单样式
 .mugx-item {
   display: inline-block;
-  z-index: $mugx-list-zIndex;
+  z-index: $mugx-z-index;
 }
 
 // 垂直样式的主菜单条目 .mugx.verticle > .mugx-item
@@ -55,7 +54,7 @@ $mugx-list-zIndex: 20;
 
 .mugx-sub {
   position: absolute;
-  z-index: ($mugx-list-zIndex + 1); // 二级菜单的z-index要比主菜单的高一点
+  z-index: ($mugx-z-index + 1); // 二级菜单的z-index要比主菜单的高一点
   display: none;
 
   &.active {
