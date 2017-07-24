@@ -44,6 +44,12 @@
 	* `.mugx-item`
 		* `.mugx-sub
 
+## 配置项
+
+- **.mugx[data-pos=值]** 是二级菜单将要显示的位置，取值可为 相对于list的`list.right`, `list.left`, `list.bottom`, `list.top`，或相对为当前item的 `item.bottom`，`item.top`。如果没有设置，默认为 `list.bottom`。
+- **.mugx[data-classes=值]** 是当鼠标进入一级菜单时，二级菜单将要应用的类。如果没有设置，默认为 `active`。
+- **.mugx[data-z-index=值]** 主菜单的z-index值，默认为20。
+
 ## 用法
 
 ### 1. 在head中插入样式：
@@ -67,9 +73,6 @@
   </div>
 </body>
 ```
-
-> - **data-pos** 是二级菜单将要显示的位置，取值可为 `list.right`, `list.left`, `list.bottom`, `list.top`，如果没有设置，默认为 `list.bottom`。
-> - **data-classes** 是当鼠标进入一级菜单时，二级菜单将要应用的类。如果没有设置，默认为 `active`。
 
 ### 3. 加入一级菜单和二级菜单的内容
 
@@ -115,6 +118,13 @@
   <script src="<path>/mugx.min.js"></script>
   <script>
     $(".mugx").mugx();
+    
+    // 或者带入配置项
+    $(".mugx").mugx({
+      "pos": "list.bottom",
+      "classes": "active class-1 class-2",
+      "z-index": 100
+    });
   </script>
 </body>
 ```
