@@ -105,14 +105,14 @@
 
 > 一级菜单中的大标题设为`h6`，小标题设为`p`，只是演示而已。可根据自己需要，在 mugx.theme.css 文件中自行定义需要的样式。
 
-### 4. 导入jquery和jquery.mugx.js，然后应用。
+### 4. 导入jquery.js和mugx.js，然后应用。
 
 ```html
 <body>
   <!-- 前面已经添加好了的HTML内容 -->
 
   <script src="<path>/jquery.min.js"></script>
-  <script src="<path>/jquery.mugx.min.js"></script>
+  <script src="<path>/mugx.min.js"></script>
   <script>
     $(".mugx").mugx();
   </script>
