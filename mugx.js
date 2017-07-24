@@ -15,6 +15,7 @@
       var defaults = {
         pos: "list.bottom",
         classes: "active",
+        z_index: 20,
       }
 
       // combines defaults and parameters
@@ -34,6 +35,11 @@
           classes = options.classes;
         }
 
+        var z_index = $(this).attr("data-z-index");
+        if (z_index == undefined) {
+          z_index = options.z_index;
+        }
+
         // get the .mugx-list element
         var list = $(this);
         var list_width = list.outerWidth();
@@ -49,6 +55,9 @@
           var item = $(this);
           var item_left = item.position().left;
 
+          // set item's z-index
+          item.css("z-index", z_index);
+
           // add/remove .active class for each .mugx-item element
           item.mouseenter(function () {
             item.addClass("active");
@@ -60,6 +69,11 @@
           // get .mugx-sub element
           var sub = item.find(".mugx-sub");
           if (sub.length == 0) return true;
+
+          // set sub's z-index
+          sub.css("z-index", z_index+1);
+
+          // get sub's width
           var sub_width = sub.outerWidth();
 
           switch (pos) {
