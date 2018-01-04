@@ -2,7 +2,7 @@
  * A nice sliding menu jquery extension.
  * See https://github.com/zeupin/mugx
  *
- * Copyright (c) 2017 Zeupin LLC.
+ * Copyright (c) 2017-2018 Zeupin LLC.
  * Author: Macc Liu (https://github.com/maccliu)
  *
  * Licensed under MIT.
